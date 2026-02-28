@@ -1,13 +1,13 @@
-package net.protsenko.refrigeration.engineer.airefrigerationengineer;
+package net.protsenko.refrigeration.engineer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AiRefrigerationEngineerApplication {
+public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(AiRefrigerationEngineerApplication.class, args);
+        SpringApplication.run(App.class, args);
     }
 
 }
