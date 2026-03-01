@@ -8,6 +8,7 @@ import java.util.List;
 public record ChamberSpec(
         String name,
         SpecValue chamberTemp,
+        SpecValue humidity,
         Dimensions dimensions,
         AdjacentSpaces adjacentSpaces,
         DailyVolume dailyVolume,

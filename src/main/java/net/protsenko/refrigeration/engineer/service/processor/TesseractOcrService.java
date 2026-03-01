@@ -43,7 +43,6 @@ public class TesseractOcrService implements OcrService {
                         "-colorspace", "Gray",
                         "-normalize",
                         "-sharpen", "0x1",
-                        "-threshold", "50%",
                         preprocessed.toString()
                 ).redirectErrorStream(true).start().waitFor();
 
