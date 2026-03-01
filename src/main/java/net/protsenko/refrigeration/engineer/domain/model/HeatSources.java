@@ -1,6 +1,8 @@
 package net.protsenko.refrigeration.engineer.domain.model;
 
+import java.util.List;
+
 public record HeatSources(
-        SpecValue staffCount,
-        SpecValue equipment
+        List<StaffEntry> staff,
+        List<EquipmentEntry> equipment
 ) {}

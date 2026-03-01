@@ -4,5 +4,4 @@ public record DailyVolume(
         String tons,
         String pallets,
         String palletWeight
-) {
-}
+) {}

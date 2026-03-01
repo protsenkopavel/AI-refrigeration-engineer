@@ -1,7 +1,7 @@
 package net.protsenko.refrigeration.engineer.controller;
 
 import lombok.RequiredArgsConstructor;
-import net.protsenko.refrigeration.engineer.domain.model.ChamberSpecList;
+import net.protsenko.refrigeration.engineer.domain.model.AnalysisResult;
 import net.protsenko.refrigeration.engineer.service.IntakeService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ public class Controller {
     private final IntakeService intakeService;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ChamberSpecList upload(
+    public AnalysisResult upload(
             @RequestPart("spec") MultipartFile spec,
             @RequestPart(value = "layout", required = false) MultipartFile layout,
             @RequestPart(value = "turnover", required = false) MultipartFile turnover
