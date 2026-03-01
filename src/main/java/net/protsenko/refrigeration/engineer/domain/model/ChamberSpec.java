@@ -16,5 +16,8 @@ public record ChamberSpec(
         Ventilation ventilation,
         Insulation insulation,
         Doors doors,
-        List<String> engineeringNotes
-) { }
+        List<String> engineeringNotes,
+        DataStatus dataStatus,
+        List<ChamberSpec> subZones,
+        DataStatus heatSourcesStatus
+) {}
