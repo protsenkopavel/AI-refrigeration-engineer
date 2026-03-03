@@ -27,18 +27,12 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-liquibase")
-    implementation("org.springframework.ai:spring-ai-tika-document-reader")
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
-    implementation("org.springframework.ai:spring-ai-pdf-document-reader")
+
     implementation("org.apache.pdfbox:pdfbox:3.0.2")
     implementation("org.apache.poi:poi-ooxml:5.5.1")
 
     compileOnly("org.projectlombok:lombok")
-
-    runtimeOnly("org.postgresql:postgresql")
-
     annotationProcessor("org.projectlombok:lombok")
 }
 

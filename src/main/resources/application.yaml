@@ -1,23 +1,22 @@
+server:
+  port: 8080
+
 spring:
+  config:
+    import: optional:file:.env[.properties]
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
   ai:
     openai:
-      api-key: ${OPEN_API_KEY}
+      api-key: ${OPENAI_API_KEY}
       chat:
         options:
           model: gpt-5.2
           temperature: 0.1
-  servlet:
-    multipart:
-      max-file-size: 20MB
-      max-request-size: 20MB
-  config:
-    import: optional:file:.env[.properties]
-  datasource:
-    url: jdbc:postgresql://${HOST}/${POSTGRES_DB}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
-    jpa:
-      hibernate:
-        ddl-auto: none
-    liquibase:
-      enabled: false
+
+app:
+  pdf:
+    max-image-pages: 10
+    image-dpi: 200
